@@ -13,4 +13,4 @@ nnoremap gV '[v']
 " Remap the escape key to jk
 inoremap jk <esc>
 
-" Testing 123 testing...
+" Testing 123 testing... ayy lmao
