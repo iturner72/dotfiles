@@ -3,10 +3,6 @@
 " Shows row numbers
 set number 
 
-" Move to beginning/end of line
-map B ^ 
-map E $
-
 " Highlight last inserted text
 nnoremap gV '[v']
 
