@@ -4,8 +4,8 @@
 set number 
 
 " Move to beginning/end of line
-nmap B ^ 
-nmap E $
+map B ^ 
+map E $
 
 " Highlight last inserted text
 nnoremap gV '[v']
