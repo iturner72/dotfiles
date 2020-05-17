@@ -3,8 +3,8 @@
 " Shows row numbers
 set number 
 
-" Highlight last inserted text
-nnoremap gV '[v']
+" Simple highlighting 
+syntax on
 
 " Remap the escape key to jk
 inoremap jk <esc>
