@@ -2,11 +2,11 @@
 
 ###### Clear and List commands #####
 
-alias cla="clear && ls -a"
+alias cla="clear && ls -A"
 alias cls="clear && ls"
-alias cll="clear && ls -A"
-alias la="ls -a"
-alias ll="ls -A"
+alias cll="clear && ls -alF"
+alias la="ls -A"
+alias ll="ls -alF"
 alias clc="clear"
 
 ##### MINGW64 Commands #####
