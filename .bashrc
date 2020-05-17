@@ -14,4 +14,4 @@ alias clc="clear"
 # Open file explorer in current directory
 alias files="explorer ."
 
-
+# Some testing for MINGW64
