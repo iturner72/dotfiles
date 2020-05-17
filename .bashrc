@@ -14,7 +14,4 @@ alias clc="clear"
 # Open file explorer in current directory
 alias files="explorer ."
 
-##### Github Commands #####
 
-alias gs="git status"
-alias ga="git add"
