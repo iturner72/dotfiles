@@ -9,9 +9,11 @@ alias la="ls -A"
 alias ll="ls -alF"
 alias clc="clear"
 
+##### mv and rm protection #####
+alias mv="mv -i"
+alias rm="rm -i"
+
 ##### MINGW64 Commands #####
 
 # Open file explorer in current directory
 alias files="explorer ."
-
-
