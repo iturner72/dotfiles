@@ -16,4 +16,5 @@ alias rm="rm -i"
 ##### MINGW64 Commands #####
 
 # Open file explorer in current directory
-alias files="explorer ."
+alias files="explorer ." # For MINGW64
+alias files="nautilus ." # For Ubuntu 18.04
