@@ -18,3 +18,4 @@ alias rm="rm -i"
 # Open file explorer in current directory
 alias files="explorer ." # For MINGW64
 alias files="nautilus ." # For Ubuntu 18.04
+alias files="explorer.exe ." # For WSL 2 Ubuntu 18.04
