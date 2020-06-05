@@ -1,4 +1,4 @@
-# This is my version controlled .bashrc file 
+# This is my version controlled .bash_aliases file 
 
 ###### Clear and List commands #####
 
