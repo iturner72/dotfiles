@@ -9,11 +9,14 @@ syntax on
 " Remap the escape key to jk
 inoremap jk <esc>
 
-" Easier split navigations 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" Vim and tmux split/pane navigations 
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -37,6 +40,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
