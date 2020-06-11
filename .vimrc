@@ -2,10 +2,19 @@
 
 " Get rid of annoying bell sound, replace w visual bell
 set visualbell
+
 " Simple highlighting 
 syntax on
+
 " Remap the escape key to jk
 inoremap jk <esc>
+
+" Easier split navigations 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
