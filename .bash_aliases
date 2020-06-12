@@ -1,6 +1,6 @@
 # This is my version controlled .bash_aliases file 
 
-###### Clear and List commands #####
+###### Clear and ls commands #####
 
 alias cla="clear && ls -A"
 alias cls="clear && ls"
@@ -12,6 +12,9 @@ alias clc="clear"
 ##### mv and rm protection #####
 alias mv="mv -i"
 alias rm="rm -i"
+
+##### cp clarity #####
+alias cp='cp -iv'
 
 ##### MINGW64 Commands #####
 
