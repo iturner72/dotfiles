@@ -9,16 +9,22 @@ syntax on
 " Remap the escape key to jk
 inoremap jk <esc>
 
-"-------------------------------- Movement ------------------------------------
+"-------------------------------- Mappings ------------------------------------
+" Git and vim integration
+let mapleader = "\<Space>"
+nmap <leader>gs :G<CR>
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
 
 " Vim and tmux split/pane navigations 
 let g:tmux_navigator_no_mappings = 1
-
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
+
+map <C-n> :NERDTreeToggle<CR>
 
 "----------------------------- General Settings -------------------------------
 set tabstop=4 softtabstop=4
@@ -34,6 +40,10 @@ set incsearch
 set colorcolumn=80 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+
+"------------------------------ Status Line -----------------------------------
+set statusline+=%F
+
 "-------------------------------- Plugins -------------------------------------
 call plug#begin('~/.vim/plugged')
 
@@ -44,9 +54,12 @@ Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
+"--------------------------------- Themes -------------------------------------
 colorscheme gruvbox
 set background=dark
 
