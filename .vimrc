@@ -9,6 +9,8 @@ syntax on
 " Remap the escape key to jk
 inoremap jk <esc>
 
+"-------------------------------- Movement ------------------------------------
+
 " Vim and tmux split/pane navigations 
 let g:tmux_navigator_no_mappings = 1
 
@@ -18,6 +20,7 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
+"----------------------------- General Settings -------------------------------
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -31,7 +34,7 @@ set incsearch
 set colorcolumn=80 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-" Plugins
+"-------------------------------- Plugins -------------------------------------
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
@@ -50,5 +53,3 @@ set background=dark
 if executable('rg')
     let g:rg_derive_root='true'
 endif
-
-
