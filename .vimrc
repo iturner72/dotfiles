@@ -6,8 +6,8 @@ set visualbell
 " Simple highlighting 
 syntax on
 
-" Remap the escape key to kj
-inoremap kj <esc>
+" Remap the escape key to jk
+inoremap jk <esc>
 
 "-------------------------------- Mappings ------------------------------------
 " Git and vim integration
