@@ -59,6 +59,8 @@ Plug 'preservim/nerdtree'
 
 call plug#end()
 
+"------------------------------- Clipboard ------------------------------------
+
 "--------------------------------- Themes -------------------------------------
 colorscheme gruvbox
 set background=dark
