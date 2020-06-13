@@ -115,3 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
+export PATH=/usr/lib/ccache:$PATH
