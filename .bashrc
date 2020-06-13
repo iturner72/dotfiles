@@ -118,3 +118,5 @@ fi
 
 export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
 export PATH=/usr/lib/ccache:$PATH
+source /usr/share/gazebo/setup.sh
+export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
