@@ -118,12 +118,12 @@ fi
 
 # Since this .bashrc is used on both WSL and a normal Ubuntu 18.04 distibution
 # I will try and make an if statement to export the correct paths to the 
-# correct environments. 
+# correct environments. This if statement
 if [ -d /mnt/c/Windows ]; then
     return
 else
-export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
-export PATH=/usr/lib/ccache:$PATH
-source /usr/share/gazebo/setup.sh
-export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
+    export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
+    export PATH=/usr/lib/ccache:$PATH
+    source /usr/share/gazebo/setup.sh
+    export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
 fi
