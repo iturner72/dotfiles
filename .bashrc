@@ -123,11 +123,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Since this .bashrc is used on both WSL and a normal Ubuntu 18.04 distibution
+# Since this .bashrc is used on both wsl and a normal Ubuntu 18.04 distibution
 # I will try and make an if statement to export the correct paths to the 
-# correct environments. This if statement
+# correct environments. 
 if [ -d /mnt/c/Windows ]; then
-    return
+    export DISPLAY=:0
 else
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
     export PATH=/usr/lib/ccache:$PATH
