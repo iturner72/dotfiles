@@ -129,6 +129,7 @@ fi
 if [ -d /mnt/c/Windows ]; then
     source /opt/ros/melodic/setup.bash
     export DISPLAY=:0
+    export GAZEBO_IP=127.0.0.1    
 else
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
     export PATH=/usr/lib/ccache:$PATH
