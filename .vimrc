@@ -24,8 +24,6 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
-map <C-n> :NERDTreeToggle<CR>
-
 "----------------------------- General Settings -------------------------------
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -51,8 +49,14 @@ Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
+
+"------------------------------- NerdTree ------------------------------------
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
 
 "------------------------------- Clipboard ------------------------------------
 
