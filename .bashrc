@@ -127,6 +127,7 @@ fi
 # I will try and make an if statement to export the correct paths to the 
 # correct environments. 
 if [ -d /mnt/c/Windows ]; then
+    source /opt/ros/melodic/setup.bash
     export DISPLAY=:0
 else
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
