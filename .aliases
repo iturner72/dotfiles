@@ -1,7 +1,6 @@
 # This is my version controlled .bash_aliases file 
 
 ###### Clear and ls commands #####
-
 alias cla="clear && ls -A"
 alias cls="clear && ls"
 alias cll="clear && ls -alF"
@@ -16,7 +15,8 @@ alias rm="rm -i"
 ##### cp clarity #####
 alias cp='cp -iv'
 
-##### MINGW64 Commands #####
+##### screenfetch #####
+alias info='clear && screenfetch'
 
 # Open file explorer in current directory
 alias files="explorer ." # For MINGW64
