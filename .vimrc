@@ -1,15 +1,10 @@
 "This is iturner72's version controlled .vimrc file
 
-" Get rid of annoying bell sound, replace w visual bell
-set visualbell
-
-" Simple highlighting 
-syntax on
-
-" Remap the escape key to jk
-inoremap jk <esc>
 
 "-------------------------------- Mappings ------------------------------------
+" escape remap
+inoremap jk <esc>
+
 " Git and vim integration
 let mapleader = "\<Space>"
 nmap <leader>gs :G<CR>
@@ -25,6 +20,8 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 "----------------------------- General Settings -------------------------------
+syntax on
+set visualbell
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
