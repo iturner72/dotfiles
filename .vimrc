@@ -1,4 +1,4 @@
-" This is iturner72's version controlled .vimrc file
+"This is iturner72's version controlled .vimrc file
 
 " Get rid of annoying bell sound, replace w visual bell
 set visualbell
