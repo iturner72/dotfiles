@@ -69,6 +69,11 @@ let g:NERDTreeIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
+
+" Get rid of arrows
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+
 "------------------------------- Clipboard ------------------------------------
 
 "--------------------------------- Themes -------------------------------------
