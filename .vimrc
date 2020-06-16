@@ -4,12 +4,6 @@
 "-------------------------------- Mappings ------------------------------------
 " general remaps
 inoremap jk <esc>
-map <leader>h :wincmd h<CR>
-map <leader>j :wincmd j<CR>
-map <leader>k :wincmd k<CR>
-map <leader>l :wincmd l<CR>
-nnoremap <Leader>pt :NERDTreeToggle<Enter>
-nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 " Git and vim integration
 let mapleader = "\<Space>"
@@ -57,6 +51,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -87,6 +82,11 @@ let g:NERDTreeIndicatorMapCustom = {
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
+if exists("g:loaded_webdevicons")
+    call webdevicons#refresh()
+endif
+"NERDTrees File highlighting only the glyph/icon
+"
 "--------------------------------- Themes -------------------------------------
 colorscheme gruvbox
 set background=dark
