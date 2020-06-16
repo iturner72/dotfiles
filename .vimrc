@@ -38,6 +38,9 @@ set smartcase
 set noswapfile
 set incsearch
 set relativenumber
+set encoding=utf8
+set conceallevel=3
+set guifont=Ubuntu\ Mono\ Nerd\ Font\ Complete\ Mono.ttf\ 11
 
 set colorcolumn=80 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -54,8 +57,12 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+
+"------------------------------- Airline ------------------------------------
+let g:airline_powerline_fonts = 1
 
 "------------------------------- NerdTree ------------------------------------
 autocmd StdinReadPre * let s:std_in=1
