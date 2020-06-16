@@ -142,3 +142,5 @@ else
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
 fi
 
+# Git integration with bash
+export PS1="\[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
