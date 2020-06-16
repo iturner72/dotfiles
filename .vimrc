@@ -2,8 +2,14 @@
 
 
 "-------------------------------- Mappings ------------------------------------
-" escape remap
+" general remaps
 inoremap jk <esc>
+map <leader>h :wincmd h<CR>
+map <leader>j :wincmd j<CR>
+map <leader>k :wincmd k<CR>
+map <leader>l :wincmd l<CR>
+nnoremap <Leader>pt :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 " Git and vim integration
 let mapleader = "\<Space>"
