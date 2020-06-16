@@ -132,8 +132,6 @@ if [ -d /mnt/c/Windows ]; then
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
-    export DISPLAY=:0
-    export GAZEBO_IP=127.0.0.1    
 else
     source /opt/ros/melodic/setup.bash
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
