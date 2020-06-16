@@ -39,6 +39,9 @@ set guifont=Ubuntu\ Mono\ Nerd\ Font\ Complete\ Mono.ttf\ 11
 set colorcolumn=80 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+"-------------------------- Ros Syntax Highlighting ---------------------------
+autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
+
 "-------------------------------- Plugins -------------------------------------
 call plug#begin('~/.vim/plugged')
 
