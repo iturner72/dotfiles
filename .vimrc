@@ -80,8 +80,6 @@ let g:NERDTreeIndicatorMapCustom = {
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
-"------------------------------- Clipboard ------------------------------------
-
 "--------------------------------- Themes -------------------------------------
 colorscheme gruvbox
 set background=dark
