@@ -27,7 +27,7 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 "----------------------------- General Settings -------------------------------
 syntax on
-set visualbell
+set guicursor=a:blinkon100
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
