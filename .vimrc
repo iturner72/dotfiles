@@ -34,7 +34,6 @@ set incsearch
 set relativenumber
 set encoding=utf8
 set conceallevel=3
-set guifont=Ubuntu\ Mono\ Nerd\ Font\ Complete\ Mono.ttf\ 11
 
 set colorcolumn=80 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
