@@ -133,11 +133,6 @@ if [ -d /mnt/c/Windows ]; then
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
-    if [ -d /mnt/v ]; then
-        export DISPLAY=192.168.1.71:0.0
-    else 
-        export DISPLAY=192.168.1.85:0.0
-    fi
 else
     source /opt/ros/melodic/setup.bash
     source ~/catkin_ws/devel/setup.bash
