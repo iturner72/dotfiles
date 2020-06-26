@@ -128,6 +128,7 @@ fi
 # correct environments. 
 if [ -d /mnt/c/Windows ]; then
     source /opt/ros/melodic/setup.bash
+    source ~/lm_project/devel/setup.bash
     source ~/catkin_ws/devel/setup.bash
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
     export PATH=/usr/lib/ccache:$PATH
@@ -136,6 +137,7 @@ if [ -d /mnt/c/Windows ]; then
 else
     source /opt/ros/melodic/setup.bash
     source ~/catkin_ws/devel/setup.bash
+    source ~/lm_project/devel/setup.bash
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
