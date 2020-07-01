@@ -139,7 +139,7 @@ else
     source /opt/ros/melodic/setup.bash
     source ~/catkin_ws/devel/setup.bash
     source ~/lm_project/devel/setup.bash
-    export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/easye/lm_project/src
+    export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/ian/lm_project/src
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
     export PATH=/usr/lib/ccache:$PATH
