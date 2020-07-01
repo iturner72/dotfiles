@@ -129,10 +129,10 @@ fi
 if [ -d /mnt/c/Windows ]; then
     source /opt/ros/melodic/setup.bash
     source ~/catkin_ws/devel/setup.bash
-    export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
+    export PATH=$PATH:$HOME/ardupilot/Tools/autotest 
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
-    export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
+    export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
 else
     source /opt/ros/melodic/setup.bash
     source ~/catkin_ws/devel/setup.bash
