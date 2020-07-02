@@ -135,7 +135,7 @@ if [ -d /mnt/c/Windows ]; then
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
-    export PYTHONPATH=~/mavlink
+#   export PYTHONPATH=~/mavlink
 else
     source /opt/ros/melodic/setup.bash
     source ~/lm_project/devel/setup.bash
@@ -145,7 +145,7 @@ else
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
-    export PYTHONPATH=~/software/mavlink
+#   export PYTHONPATH=~/software/mavlink
 fi
 
 # Git integration with bash
