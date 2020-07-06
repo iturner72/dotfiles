@@ -57,6 +57,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'romainl/vim-cool'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
