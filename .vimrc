@@ -44,6 +44,7 @@ autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
 "-------------------------------- Plugins -------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
@@ -58,6 +59,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+
+" coc issue with neovim
+let g:coc_disable_startup_warning = 1
 
 "------------------------------- Airline ------------------------------------
 let g:airline_powerline_fonts = 1
