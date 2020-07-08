@@ -49,6 +49,7 @@ Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
+Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
@@ -94,11 +95,33 @@ if exists("g:loaded_webdevicons")
     call webdevicons#refresh()
 endif
 "NERDTrees File highlighting only the glyph/icon
-"
+
+"-----------------------------------Coc----------------------------------------
+function! s:check_back_space() abort
+    let col - col('.') - 1
+    return !col || getline('.')[col - q] =~# '\s'
+endfunction
+
+fun! GoCoc()
+    inoremap <buffer> <silent><expr> <TAB>
+                \ pumvisible() ? "\<C-n>" :
+                \ <SID>check_back_space() ? "\<TAB>" :
+                \ coc#refresh()
+    inoremap <buffer> <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+    inoremap <buffer> <silent><expr> <C-space> coc#refresh()
+
+    " GoTo code navigation.
+    nmap <buffer> <leader>gd <Plug>(coc-definition)
+    nmap <buffer> <leader>gy <Plug>(coc-type-definition)
+    nmap <buffer> <leader>gi <Plug>(coc-implementation)
+    nmap <buffer> <leader>gr <Plug>(coc-references)
+    nnoremap <buffer> <leader>cr :CocRestart
+endfun
+
 "--------------------------------- Themes -------------------------------------
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection='0'
 
 if exists('+termguicolors')
