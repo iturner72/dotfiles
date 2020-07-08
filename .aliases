@@ -1,4 +1,4 @@
-# This is my version controlled .bash_aliases file 
+# This is my version controlled .bash_aliases file
 
 ###### Clear and ls commands #####
 alias cla="clear && ls -A"
@@ -21,3 +21,6 @@ alias cp='cp -iv'
 
 ##### screenfetch #####
 alias info='clear && screenfetch'
+
+##### source bashrc #####
+alias sb='source ~/.bashrc'

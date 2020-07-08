@@ -136,7 +136,7 @@ if [ -d /mnt/c/Windows ]; then
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
     export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-#   export PYTHONPATH=~/mavlink
+    export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
 else
     source /opt/ros/melodic/setup.bash
     source ~/lm_project/devel/setup.bash
@@ -147,7 +147,7 @@ else
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
     export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-#   export PYTHONPATH=~/software/mavlink
+    export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
 fi
 
 # Git integration with bash
