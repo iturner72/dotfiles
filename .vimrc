@@ -11,7 +11,7 @@ nmap <leader>gs :G<CR>
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gu :diffget //2<CR>
 
-" Vim and tmux split/pane navigations 
+" Vim and tmux split/pane navigations
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
@@ -35,7 +35,7 @@ set relativenumber
 set encoding=utf8
 set conceallevel=3
 
-set colorcolumn=80 
+set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 "-------------------------- Ros Syntax Highlighting ---------------------------
@@ -61,9 +61,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
-
-" coc issue with neovim
-let g:coc_disable_startup_warning = 1
 
 "------------------------------- Airline ------------------------------------
 let g:airline_powerline_fonts = 1
