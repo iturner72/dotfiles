@@ -118,6 +118,14 @@ fun! GoCoc()
     nnoremap <buffer> <leader>cr :CocRestart
 endfun
 
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+autocmd BufWritePre * :call TrimWhitespace()
+
 "--------------------------------- Themes -------------------------------------
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
