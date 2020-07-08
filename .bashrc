@@ -124,27 +124,29 @@ if ! shopt -oq posix; then
 fi
 
 # Since this .bashrc is used on both wsl and a normal Ubuntu 18.04 distibution
-# I will try and make an if statement to export the correct paths to the 
-# correct environments. 
+# I will try and make an if statement to export the correct paths to the
+# correct environments.
 if [ -d /mnt/c/Windows ]; then
     source /opt/ros/melodic/setup.bash
     source ~/lm_project/devel/setup.bash
     source ~/catkin_ws/devel/setup.bash
-    export PATH=$PATH:$HOME/ardupilot/Tools/autotest 
+    export PATH=$PATH:$HOME/ardupilot/Tools/autotest
     export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/easye/lm_project/src
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
+    export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 #   export PYTHONPATH=~/mavlink
 else
     source /opt/ros/melodic/setup.bash
     source ~/lm_project/devel/setup.bash
     source ~/catkin_ws/devel/setup.bash
-    export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest 
+    export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
     export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/ian/lm_project/src
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
+    export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 #   export PYTHONPATH=~/software/mavlink
 fi
 
