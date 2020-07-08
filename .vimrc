@@ -8,8 +8,8 @@ inoremap jk <esc>
 " Git and vim integration
 let mapleader = "\<Space>"
 nmap <leader>gs :G<CR>
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
 
 " Vim and tmux split/pane navigations
 let g:tmux_navigator_no_mappings = 1
@@ -18,6 +18,9 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
+
+"Fzf remaps
+nnoremap <C-p> :GFiles<CR>
 
 "----------------------------- General Settings -------------------------------
 syntax on
