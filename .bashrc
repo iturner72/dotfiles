@@ -142,7 +142,7 @@ else
     source ~/lm_project/devel/setup.bash
     source ~/catkin_ws/devel/setup.bash
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
-    export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/ian/lm_project/src
+    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/opt/ros/melodic/share:/home/ian/lm_project/src
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
