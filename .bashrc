@@ -127,7 +127,6 @@ fi
 # I will try and make an if statement to export the correct paths to the
 # correct environments.
 if [ -d /mnt/c/Windows ]; then
-    source /opt/ros/melodic/setup.bash
     source ~/lm_project/devel/setup.bash
     source ~/catkin_ws/devel/setup.bash
     export PATH=$PATH:$HOME/ardupilot/Tools/autotest
@@ -137,17 +136,17 @@ if [ -d /mnt/c/Windows ]; then
     export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
     export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
     export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
-else
     source /opt/ros/melodic/setup.bash
+else
     source ~/lm_project/devel/setup.bash
     source ~/catkin_ws/devel/setup.bash
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
-    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/opt/ros/melodic/share:/home/ian/lm_project/src
+    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
     export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-    export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
+    source /opt/ros/melodic/setup.bash
 fi
 
 # Git integration with bash
