@@ -146,6 +146,7 @@ else
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
     export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+    export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
     source /opt/ros/melodic/setup.bash
 fi
 
