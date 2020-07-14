@@ -127,27 +127,27 @@ fi
 # I will try and make an if statement to export the correct paths to the
 # correct environments.
 if [ -d /mnt/c/Windows ]; then
-    source ~/lm_project/devel/setup.bash
-    source ~/catkin_ws/devel/setup.bash
     export PATH=$PATH:$HOME/ardupilot/Tools/autotest
-    export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/easye/lm_project/src
+    export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/easye/lm_project/src:$ROS_PACKAGE_PATH
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
     export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
     export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
     source /opt/ros/melodic/setup.bash
-else
-    source ~/lm_project/devel/setup.bash
     source ~/catkin_ws/devel/setup.bash
+    source ~/lm_project/devel/setup.bash
+else
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
-    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share
+    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
     export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
     export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
     export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
     source /opt/ros/melodic/setup.bash
+    source ~/catkin_ws/devel/setup.bash
+    source ~/lm_project/devel/setup.bash
 fi
 
 # Git integration with bash
