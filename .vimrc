@@ -26,6 +26,8 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 "Fzf remaps
 nnoremap <C-p> :GFiles<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>h :History<CR>
 
 " }}}
 " =============================================================================
