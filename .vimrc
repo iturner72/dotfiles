@@ -1,7 +1,12 @@
-"This is iturner72's version controlled .vimrc file
+" vim: set foldmethod=marker foldlevel=0 nomodeline:
+" =============================================================================
+"This is iturner72's version controlled .vimrc file {{{
+" =============================================================================
 
-
-"-------------------------------- Mappings ------------------------------------
+" }}}
+" =============================================================================
+" MAPPINGS {{{
+" =============================================================================
 " general remaps
 inoremap jk <esc>
 
@@ -22,7 +27,10 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 "Fzf remaps
 nnoremap <C-p> :GFiles<CR>
 
-"----------------------------- General Settings -------------------------------
+" }}}
+" =============================================================================
+" GENERAL SETTINGS {{{
+" =============================================================================
 syntax on
 set guicursor=a:blinkon100
 set tabstop=4 softtabstop=4
@@ -41,10 +49,16 @@ set conceallevel=3
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-"-------------------------- Ros Syntax Highlighting ---------------------------
+" }}}
+" =============================================================================
+" ROS SYNTAX HIGHLIGHTING {{{
+" =============================================================================
 autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
 
-"-------------------------------- Plugins -------------------------------------
+" }}}
+" =============================================================================
+" PLUGINS {{{
+" =============================================================================
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -64,10 +78,16 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-"------------------------------- Airline ------------------------------------
+" }}}
+" =============================================================================
+" AIRLINE {{{
+" =============================================================================
 let g:airline_powerline_fonts = 1
 
-"------------------------------- NerdTree ------------------------------------
+" }}}
+" =============================================================================
+" NERDTREE {{{
+" =============================================================================
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
@@ -95,7 +115,10 @@ if exists("g:loaded_webdevicons")
 endif
 "NERDTrees File highlighting only the glyph/icon
 
-"-----------------------------------Coc----------------------------------------
+" }}}
+" =============================================================================
+" COC {{{
+" =============================================================================
 function! s:check_back_space() abort
     let col - col('.') - 1
     return !col || getline('.')[col - q] =~# '\s'
@@ -125,7 +148,10 @@ endfun
 
 autocmd BufWritePre * :call TrimWhitespace()
 
-"--------------------------------- Themes -------------------------------------
+" }}}
+" =============================================================================
+" THEMES {{{
+" =============================================================================
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 set background=dark
@@ -139,3 +165,5 @@ endif
 if executable('rg')
     let g:rg_derive_root='true'
 endif
+
+" }}}
