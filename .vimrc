@@ -87,6 +87,7 @@ call plug#end()
 " =============================================================================
 " AIRLINE {{{
 " =============================================================================
+let g:airline_extensions = []
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
