@@ -9,6 +9,7 @@
 " =============================================================================
 " general remaps
 inoremap jk <esc>
+command! BufOnly execute '%bdelete|edit #|normal `"'
 
 " Git and vim integration
 let mapleader = "\<Space>"
