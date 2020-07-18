@@ -24,10 +24,13 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
-"Fzf remaps
+" Fzf remaps
 nnoremap <C-p> :GFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>h :History<CR>
+
+" Terminal in vim
+nmap <leader>t :terminal<CR>
 
 " }}}
 " =============================================================================
