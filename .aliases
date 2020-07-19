@@ -1,4 +1,4 @@
-# This is my version controlled .bash_aliases file
+# This is iturner72's .aliases file which is called by .bashrc
 
 ###### Clear and ls commands #####
 alias cla="clear && ls -A"
@@ -24,3 +24,6 @@ alias info='clear && screenfetch'
 
 ##### source bashrc #####
 alias sb='source ~/.bashrc'
+
+##### find and edit a file with fzf #####
+alias ffe='fzf_find_edit.sh'
