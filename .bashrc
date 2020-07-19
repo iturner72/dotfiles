@@ -123,6 +123,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# add $HOME/bin to path for personal bash scripts
+export PATH="$HOME/bin:$PATH"
+
 # Since this .bashrc is used on both wsl and a normal Ubuntu 18.04 distibution
 # I will try and make an if statement to export the correct paths to the
 # correct environments.
