@@ -9,7 +9,6 @@
 " =============================================================================
 " general remaps
 inoremap jk <esc>
-command! BufOnly execute '%bdelete|edit #|normal `"'
 
 " Git and vim integration
 let mapleader = "\<Space>"
@@ -54,6 +53,23 @@ set conceallevel=3
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" }}}
+" =============================================================================
+" FUNCTIONS {{{
+" =============================================================================
+" Close all buffers except current one
+command! BufOnly execute '%bdelete|edit #|normal `"'
+
+" Same thing as ctrl-p... I think...
+command! -bang -nargs=? -complete=dir Files
+     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+" Rg command with preview window enabled
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --hidden --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 " }}}
 " =============================================================================
