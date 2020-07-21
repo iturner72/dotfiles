@@ -137,13 +137,11 @@ export FZF_DEFAULT_OPTS="--no-mouse --height 80% -1 --reverse --multi --inline-i
 if [ -d /mnt/c/Windows ]; then
     export PATH=$PATH:$HOME/ardupilot/Tools/autotest
     export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/easye/lm_project/src:$ROS_PACKAGE_PATH
-    export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
 else
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
     export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
-    export PATH=/usr/lib/ccache:$PATH
     source /usr/share/gazebo/setup.sh
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
 fi
@@ -152,6 +150,7 @@ fi
 source /opt/ros/melodic/setup.bash
 source ~/catkin_ws/devel/setup.bash
 source ~/lm_project/devel/setup.bash
+export PATH=/usr/lib/ccache:$PATH
 
 # Git integration with bash
 parse_git_branch() {
