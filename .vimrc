@@ -29,7 +29,7 @@ function! s:find_git_root()
     return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
-nnoremap <C-p> :ProjectFiles<CR>
+nmap <leader>p :ProjectFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>h :History<CR>
 
