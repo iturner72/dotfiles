@@ -34,6 +34,7 @@ command! ProjectFiles execute 'Files' s:find_git_root()
 nmap <leader>p :ProjectFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>h :History<CR>
+nmap <leader>P :FZF ~<CR>
 
 " Terminal in vim
 nmap <leader>t :terminal<CR>
