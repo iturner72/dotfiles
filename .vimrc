@@ -39,6 +39,10 @@ nmap <leader>P :FZF ~<CR>
 " Terminal in vim
 nmap <leader>t :terminal<CR>
 
+" Tabs
+nnoremap ]t :tabn<cr>
+nnoremap [t :tabp<cr>
+
 " }}}
 " =============================================================================
 " GENERAL SETTINGS {{{
