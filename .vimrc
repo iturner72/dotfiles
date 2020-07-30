@@ -84,9 +84,12 @@ command! -bang -nargs=* Rg
 
 " }}}
 " =============================================================================
-" ROS SYNTAX HIGHLIGHTING {{{
+" FILE TYPE INDENTATION {{{
 " =============================================================================
 autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
+augroup FileTypeSpecificAutocommands
+    autocmd FileType xml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
 
 " }}}
 " =============================================================================
