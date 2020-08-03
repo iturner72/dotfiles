@@ -82,6 +82,10 @@ command! -bang -nargs=* Rg
   \   'rg --column --hidden --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
 
+" Make fzf search window appear in center
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+
 " }}}
 " =============================================================================
 " FILE TYPE INDENTATION {{{
