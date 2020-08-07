@@ -43,6 +43,10 @@ nmap <leader>t :terminal<CR>
 nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
 
+" Jumping through buffers
+nnoremap ]j :bnext<cr>
+nnoremap [j :bprev<cr>
+
 " }}}
 " =============================================================================
 " GENERAL SETTINGS {{{
