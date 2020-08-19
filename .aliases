@@ -27,3 +27,7 @@ alias sb='source ~/.bashrc'
 
 ##### find and edit a file with fzf #####
 alias ffe='fzf_find_edit.sh'
+
+##### ouster data visualization #####
+alias lidarplay='roslaunch ouster_ros os1.launch replay:=true image:=true lidar_mode:=2048x10'
+
