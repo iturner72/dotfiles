@@ -30,3 +30,7 @@ alias ffe='fzf_find_edit.sh'
 
 ##### power and sleep #####
 alias sleep='sudo systemctl suspend'
+
+##### ouster data visualization #####
+alias lidarplay='roslaunch ouster_ros os1.launch replay:=true image:=true lidar_mode:=2048x10'
+
