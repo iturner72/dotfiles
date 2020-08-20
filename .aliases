@@ -27,3 +27,6 @@ alias sb='source ~/.bashrc'
 
 ##### find and edit a file with fzf #####
 alias ffe='fzf_find_edit.sh'
+
+##### power and sleep #####
+alias sleep='sudo systemctl suspend'
