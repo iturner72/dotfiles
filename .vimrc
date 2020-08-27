@@ -63,7 +63,6 @@ set smartcase
 set noswapfile
 set incsearch
 set relativenumber
-set encoding=utf8
 set conceallevel=3
 
 set colorcolumn=80
