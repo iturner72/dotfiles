@@ -123,6 +123,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Boost CPP things
+export LIBS="-L/home/easye/software/boost/boost_1_74_0/stage/lib"
+export CPPFLAGS="=-I/home/easye/software/boost/boost_1_74_0"
+
 # add $HOME/bin to path for personal bash scripts
 export PATH="$HOME/bin:$PATH"
 
