@@ -111,7 +111,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-rooter'
-Plug 'airblade/vim-gitgutter'
 Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
