@@ -1,7 +1,7 @@
 [user]
 	email = ian96turner@gmail.com
-	name = Ian Turner
+	name = iturner72
 [core]
 	editor = vim
 [credential]
-	helper = store
+	helper = cache
