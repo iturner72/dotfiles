@@ -47,6 +47,19 @@ nnoremap [t :tabp<cr>
 nnoremap ]j :bnext<cr>
 nnoremap [j :bprev<cr>
 
+" Search centering
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo things...
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap ; ;<c-g>u
+
+
 " }}}
 " =============================================================================
 " GENERAL SETTINGS {{{
