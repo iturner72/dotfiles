@@ -15,8 +15,6 @@ let mapleader = "\<Space>"
 nmap <leader>gs :G<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
-nmap ]h <Plug>(GitGutterNextHunk)
-nmap [h <Plug>(GitGutterPrevHunk)
 
 " Vim and tmux split/pane navigations
 let g:tmux_navigator_no_mappings = 1
