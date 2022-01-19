@@ -139,11 +139,7 @@ export FZF_DEFAULT_OPTS="--no-mouse --height 80% -1 --reverse --multi --inline-i
 # I will try and make an if statement to export the correct paths to the
 # correct environments.
 if [ -d /mnt/c/Windows ]; then
-    export PATH=$PATH:$HOME/ardupilot/Tools/autotest
     export PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
-    export ROS_PACKAGE_PATH=/home/easye/catkin_ws/src:/opt/ros/melodic/share:/home/easye/lm_project/src:$ROS_PACKAGE_PATH
-    source /usr/share/gazebo/setup.sh
-    export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
 else
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
     export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
