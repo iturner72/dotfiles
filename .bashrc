@@ -148,9 +148,6 @@ else
 fi
 
 # ROS package stuff
-source /opt/ros/melodic/setup.bash
-source ~/catkin_ws/devel/setup.bash
-source ~/lm_project/devel/setup.bash
 export PATH=/usr/lib/ccache:$PATH
 
 # Git integration with bash
