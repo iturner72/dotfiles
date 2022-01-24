@@ -4,4 +4,4 @@
 [core]
 	editor = vim
 [credential]
-	helper = cache
+	helper = cache --timeout=3600
