@@ -150,6 +150,10 @@ else
     export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
 fi
 
+# fzf ctrl-r history keybinds
+source /usr/share/doc/fzf/examples/key-bindings.bash
+source /usr/share/doc/fzf/examples/completion.bash
+
 # ROS package stuff
 export PATH=/usr/lib/ccache:$PATH
 
