@@ -169,5 +169,6 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# WSL fix green directories
 shopt -s extglob
 LS_COLORS=${LS_COLORS/:ow=*([^:]):/:ow=:}
