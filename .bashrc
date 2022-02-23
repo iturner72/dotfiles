@@ -151,8 +151,10 @@ else
 fi
 
 # fzf ctrl-r history keybinds
+if [ -d /mnt/c/Users/imturner ]; then
 source /usr/share/doc/fzf/examples/key-bindings.bash
 source /usr/share/doc/fzf/examples/completion.bash
+fi
 
 # ROS package stuff
 export PATH=/usr/lib/ccache:$PATH
