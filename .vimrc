@@ -1,6 +1,6 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
 " =============================================================================
-"This is iturner72's version controlled .vimrc file {{{
+"This is iturner72's .vimrc file {{{
 " =============================================================================
 
 " }}}
