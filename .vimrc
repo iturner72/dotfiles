@@ -10,6 +10,11 @@
 " general remaps
 inoremap jk <esc>
 
+" Spell Checking for Master's Thesis
+set spelllang=en
+nnoremap <silent> <F3> :set spell!<CR>
+inoremap <silent> <F3> <C-O>:set spell!<CR>
+
 " Git and vim integration
 let mapleader = "\<Space>"
 nmap <leader>gs :G<CR>
