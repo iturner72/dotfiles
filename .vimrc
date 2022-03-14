@@ -14,6 +14,7 @@ inoremap jk <esc>
 set spelllang=en
 nnoremap <silent> <F3> :set spell!<CR>
 inoremap <silent> <F3> <C-O>:set spell!<CR>
+" to search forward [s or backwards ]s
 
 " Git and vim integration
 let mapleader = "\<Space>"
