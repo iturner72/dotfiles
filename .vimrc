@@ -11,7 +11,7 @@
 inoremap jk <esc>
 
 " Spell Checking for Master's Thesis
-set spelllang=en
+set spelllang=en_us
 nnoremap <silent> <F3> :set spell!<CR>
 inoremap <silent> <F3> <C-O>:set spell!<CR>
 " to search forward [s or backwards ]s
