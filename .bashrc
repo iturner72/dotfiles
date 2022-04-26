@@ -174,3 +174,5 @@ export NVM_DIR="$HOME/.nvm"
 # WSL fix green directories
 shopt -s extglob
 LS_COLORS=${LS_COLORS/:ow=*([^:]):/:ow=:}
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
