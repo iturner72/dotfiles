@@ -174,3 +174,4 @@ export NVM_DIR="$HOME/.nvm"
 # WSL fix green directories
 shopt -s extglob
 LS_COLORS=${LS_COLORS/:ow=*([^:]):/:ow=:}
+. "$HOME/.cargo/env"
