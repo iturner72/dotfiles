@@ -10,6 +10,12 @@
 " general remaps
 inoremap jk <esc>
 
+" Spell Checking for Master's Thesis
+set spelllang=en_us
+nnoremap <silent> <F3> :set spell!<CR>
+inoremap <silent> <F3> <C-O>:set spell!<CR>
+" to search forward [s or backwards ]s
+
 " Git and vim integration
 let mapleader = "\<Space>"
 nmap <leader>gs :G<CR>
@@ -132,6 +138,7 @@ Plug 'lervag/vimtex'
 Plug 'romainl/vim-cool'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tribela/vim-transparent'
 
 call plug#end()
 
