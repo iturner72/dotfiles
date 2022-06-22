@@ -138,6 +138,7 @@ Plug 'lervag/vimtex'
 Plug 'romainl/vim-cool'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tribela/vim-transparent'
 
 call plug#end()
 
