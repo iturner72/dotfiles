@@ -63,6 +63,9 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 inoremap ; ;<c-g>u
 
+" Text wrapping
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
 
 " }}}
 " =============================================================================
@@ -117,6 +120,15 @@ augroup END
 
 " }}}
 " =============================================================================
+" BULLETS {{{
+" =============================================================================
+let g:bullets_enabled_file_types = [
+  \ 'markdown',
+  \ 'text',
+  \]
+
+" }}}
+" =============================================================================
 " PLUGINS {{{
 " =============================================================================
 call plug#begin('~/.vim/plugged')
@@ -139,6 +151,7 @@ Plug 'romainl/vim-cool'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tribela/vim-transparent'
+Plug 'dkarter/bullets.vim'
 
 call plug#end()
 
