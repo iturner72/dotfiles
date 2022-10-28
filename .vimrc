@@ -63,6 +63,9 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 inoremap ; ;<c-g>u
 
+" For copy/paste on Mac
+set clipboard=unnamed
+
 " Text wrapping
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
@@ -168,9 +171,12 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " =============================================================================
 " LATEX {{{
 " =============================================================================
-let g:tex_flavor = 'tex'
-let g:vimtex_view_general_viewer = 'SumatraPDF'
-let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
+
+let g:tex_flavor='latex' # Default tex file format
+let g:vimtex_view_method = 'skim' # Choose which program to use to view PDF file
+let g:vimtex_view_skim_sync = 1 # Value 1 allows forward search after every successful compilation
+let g:vimtex_view_skim_activate = 1 # Value 1 allows change focus to skim after command `:VimtexView` is given
+
 
 " }}}
 " =============================================================================
