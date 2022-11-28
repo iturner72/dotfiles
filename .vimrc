@@ -68,6 +68,7 @@ set clipboard=unnamed
 
 " Text wrapping
 au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.tex setlocal textwidth=80
 
 
 " }}}
@@ -155,6 +156,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tribela/vim-transparent'
 Plug 'dkarter/bullets.vim'
+Plug 'stsewd/fzf-checkout.vim'
 
 call plug#end()
 
@@ -172,10 +174,38 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " LATEX {{{
 " =============================================================================
 
-let g:tex_flavor='latex' # Default tex file format
-let g:vimtex_view_method = 'skim' # Choose which program to use to view PDF file
-let g:vimtex_view_skim_sync = 1 # Value 1 allows forward search after every successful compilation
-let g:vimtex_view_skim_activate = 1 # Value 1 allows change focus to skim after command `:VimtexView` is given
+let g:tex_flavor='latex'
+let g:vimtex_view_method = 'skim'
+let g:vimtex_view_skim_sync = 1
+let g:vimtex_view_skim_activate = 1
+let g:vimtex_compiler_progname = 'nvr'
+
+augroup vimtex_mac
+  autocmd!
+  autocmd User VimtexEventCompileSuccess call UpdateSkim()
+augroup END
+
+function! UpdateSkim() abort
+    let l:out = b:vimtex.out()
+    let l:src_file_path = expand('%:p')
+    let l:cmd = [g:vimtex_view_general_viewer, '-r']
+
+    if !empty(system('pgrep Skim'))
+    call extend(l:cmd, ['-g'])
+    endif
+
+    call jobstart(l:cmd + [line('.'), l:out, l:src_file_path])
+endfunction
+
+function! s:write_server_name() abort
+  let nvim_server_file = (has('win32') ? $TEMP : '/tmp') . '/vimtexserver.txt'
+  call writefile([v:servername], nvim_server_file)
+endfunction
+
+augroup vimtex_common
+  autocmd!
+  autocmd FileType tex call s:write_server_name()
+augroup END
 
 
 " }}}
