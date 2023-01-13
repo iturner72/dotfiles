@@ -146,8 +146,8 @@ elif [ -d /mnt/c/Windows ]; then
 else
     export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
     export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
-    source /usr/share/gazebo/setup.sh
-    export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
+#    source /usr/share/gazebo/setup.sh
+#    export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
 fi
 
 # fzf ctrl-r history keybinds
