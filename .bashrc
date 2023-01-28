@@ -178,3 +178,4 @@ LS_COLORS=${LS_COLORS/:ow=*([^:]):/:ow=:}
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
