@@ -8,6 +8,10 @@ alias la="ls -A"
 alias ll="ls -alF"
 alias clc="clear"
 
+###### Directory Navigation #####
+alias ..="cd .."
+alias ...="cd ..; cd .."
+
 ##### X server #####
 alias xdt="export DISPLAY=192.168.1.71:2.0"
 alias xlt="export DISPLAY=192.168.1.85:2.0"
