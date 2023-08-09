@@ -159,6 +159,11 @@ fi
 # ROS package stuff
 export PATH=/usr/lib/ccache:$PATH
 
+# CUDA environemt
+export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64\
+    ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 # Git integration with bash
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
