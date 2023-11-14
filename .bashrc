@@ -186,14 +186,14 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/iturner/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/eze/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/iturner/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/iturner/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/eze/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/eze/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/iturner/miniconda3/bin:$PATH"
+        export PATH="/home/eze/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
