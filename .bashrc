@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -56,12 +56,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -123,9 +117,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Boost CPP things
-export LIBS="-L/home/easye/software/boost/boost_1_74_0/stage/lib"
-export CPPFLAGS="=-I/home/easye/software/boost/boost_1_74_0"
 
 # add $HOME/bin to path for personal bash scripts
 export PATH="$HOME/bin:$PATH"
@@ -163,11 +154,59 @@ export PATH=/usr/lib/ccache:$PATH
 export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-# Git integration with bash
+
+
+
+
+
+
+
+
+
+# Parse Git branch function
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1="\[\e[96m\]\u \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\] $ "
+
+# Check the operating system
+case "$(uname -s)" in
+    Linux*)
+        if [ -f /etc/arch-release ]; then
+            # Arch Linux
+            color_prompt=yes
+        elif [ -f /etc/debian_version ]; then
+            # Debian-based systems
+            if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+                debian_chroot=$(cat /etc/debian_chroot)
+            fi
+            color_prompt=yes
+        else
+            # Other Linux distributions
+            color_prompt=yes
+        fi
+        ;;
+    Darwin*)
+        # macOS
+        color_prompt=yes
+        ;;
+    *)
+        # Unknown operating system
+        color_prompt=
+        ;;
+esac
+
+if [ "$color_prompt" = yes ]; then
+    PS1='\[\033[01;35m\]\u\[\033[00m\] \[\033[01;36m\]\w\[\033[00m\] \[\033[01;31m\]$(parse_git_branch)\[\033[00m\] $ '
+else
+    PS1='\u \w $(parse_git_branch)\ $ '
+fi
+unset color_prompt
+
+
+
+
+
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -197,4 +236,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH=~/miniconda3/bin:$PATH
+export PATH=/opt/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
