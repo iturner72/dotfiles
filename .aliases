@@ -38,3 +38,5 @@ alias sleep='sudo systemctl suspend'
 ##### ouster data visualization #####
 alias lidarplay='roslaunch ouster_ros os1.launch replay:=true image:=true lidar_mode:=2048x10'
 
+#### lock screen on arch ####
+alias lk='i3lock -c 000000'
