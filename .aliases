@@ -45,5 +45,5 @@ alias lk='i3lock -c 000000'
 alias ta='tmux attach'
 
 #### git (i know) ####
-alias gs='clear && git status'
-alias gl='clear && git log --oneline'
+alias gits='clear && git status'
+alias gitl='clear && git log --oneline'
