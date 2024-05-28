@@ -135,8 +135,8 @@ if [ -d /mnt/c/Users/imturner ]; then
 elif [ -d /mnt/c/Windows ]; then
     export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
 else
-    export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
-    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
+#    export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
+#    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
 #    source /usr/share/gazebo/setup.sh
 #    export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
 fi
@@ -148,19 +148,11 @@ source /usr/share/doc/fzf/examples/completion.bash
 fi
 
 # ROS package stuff
-export PATH=/usr/lib/ccache:$PATH
+#export PATH=/usr/lib/ccache:$PATH
 
 # CUDA environemt
 export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-
-
-
-
-
-
-
 
 
 # Parse Git branch function
@@ -188,6 +180,8 @@ case "$(uname -s)" in
     Darwin*)
         # macOS
         color_prompt=yes
+        val "$(/opt/homebrew/bin/brew shellenv)"
+         "$HOME/.cargo/env"
         ;;
     *)
         # Unknown operating system
@@ -201,12 +195,6 @@ else
     PS1='\u \w $(parse_git_branch)\ $ '
 fi
 unset color_prompt
-
-
-
-
-
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -240,5 +228,3 @@ export PATH=/opt/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
