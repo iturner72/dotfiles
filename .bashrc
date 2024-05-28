@@ -180,8 +180,8 @@ case "$(uname -s)" in
     Darwin*)
         # macOS
         color_prompt=yes
-        val "$(/opt/homebrew/bin/brew shellenv)"
-         "$HOME/.cargo/env"
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+        . "$HOME/.cargo/env"
         ;;
     *)
         # Unknown operating system
