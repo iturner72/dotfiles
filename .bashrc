@@ -166,6 +166,8 @@ case "$(uname -s)" in
         if [ -f /etc/arch-release ]; then
             # Arch Linux
             color_prompt=yes
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+            . "$HOME/.cargo/env"
         elif [ -f /etc/debian_version ]; then
             # Debian-based systems
             if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
