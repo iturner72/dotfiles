@@ -180,8 +180,6 @@ case "$(uname -s)" in
     Darwin*)
         # macOS
         color_prompt=yes
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-        . "$HOME/.cargo/env"
         ;;
     *)
         # Unknown operating system
@@ -195,6 +193,10 @@ else
     PS1='\u \w $(parse_git_branch)\ $ '
 fi
 unset color_prompt
+
+
+
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -226,5 +228,3 @@ unset __conda_setup
 export PATH=~/miniconda3/bin:$PATH
 export PATH=/opt/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
-
-
