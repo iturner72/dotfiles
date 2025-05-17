@@ -150,6 +150,9 @@ fi
 # ROS package stuff
 #export PATH=/usr/lib/ccache:$PATH
 
+# Python stuff
+export PATH="HOME/.local/bin:$PATH"
+
 # CUDA environemt
 export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
@@ -227,5 +230,17 @@ unset __conda_setup
 export PATH=~/miniconda3/bin:$PATH
 export PATH=/opt/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+#export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+#export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
+#export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
+
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+fi
 
 [ -f ~/.secret_env ] && source ~/.secret_env
+
+. "$HOME/.local/bin/env"
