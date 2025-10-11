@@ -86,13 +86,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# some conditional aliases to open file explorer and nautilus
-if [ -d /mnt/c/Windows ]; then
-    alias files="explorer.exe ."
-else
-    alias files="nautilus ."
-fi
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -130,17 +123,6 @@ export FZF_DEFAULT_OPTS="--no-mouse --height 80% -1 --reverse --multi --inline-i
 # I will try and make an if statement to export the correct paths to the
 # correct environments. This has been modified to accomodate my work computer.
 
-if [ -d /mnt/c/Users/imturner ]; then
-    export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
-elif [ -d /mnt/c/Windows ]; then
-    export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
-else
-    export PATH=$PATH:$HOME/software/ardupilot/Tools/autotest
-#    export ROS_PACKAGE_PATH=/home/ian/catkin_ws/src:/home/ian/lm_project/src:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
-#    source /usr/share/gazebo/setup.sh
-#    export GAZEBO_MODEL_PATH=~/software/ardupilot_gazebo/models
-fi
-
 # fzf ctrl-r history keybinds
 if [ -d /mnt/c/Users/imturner ]; then
 source /usr/share/doc/fzf/examples/key-bindings.bash
@@ -152,10 +134,6 @@ fi
 
 # Python stuff
 export PATH="HOME/.local/bin:$PATH"
-
-# CUDA environemt
-export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 
 # Parse Git branch function
@@ -199,43 +177,9 @@ else
 fi
 unset color_prompt
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # WSL fix green directories
 shopt -s extglob
 LS_COLORS=${LS_COLORS/:ow=*([^:]):/:ow=:}
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/eze/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/eze/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/eze/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/eze/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export PATH=~/miniconda3/bin:$PATH
-export PATH=/opt/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
-#export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-#export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
-#export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
 
 if [ -f ~/.git-completion.bash ]; then
     source ~/.git-completion.bash
