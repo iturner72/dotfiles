@@ -45,3 +45,4 @@ fi
 
 # Git completion (zsh has built-in git completion, but if you have custom one)
 [ -f ~/.git-completion.zsh ] && source ~/.git-completion.zsh
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
