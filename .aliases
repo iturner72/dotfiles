@@ -47,3 +47,4 @@ alias ta='tmux attach'
 #### git (i know) ####
 alias gits='clear && git status'
 alias gitl='clear && git log --oneline'
+alias gitg='clear && git log --graph'
