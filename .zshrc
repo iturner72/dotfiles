@@ -37,6 +37,42 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# tmux layout
+# dev [dir]                     -> editor over shell 
+# dev [serverdir] [clientdir]   -> server col + client col
+dev() {
+    local ldir rdir name
+    ldir="$(cd "${1:-$PWD}" 2>/dev/null && pwd)" || { echo "no such dir: $1"; return 1; }
+    name="$(basename "$ldir" | tr '.: ' '___')"  # session names can't contain . or :
+    [ -n "$2" ] && { rdir="$(cd "$2" 2>/dev/null && pwd)" || { echo "no such dir: $2"; return 1; }; }
+
+    if ! tmux has-session -t "=$name" 2>/dev/null; then
+        tmux new-session  -d -s "$name" -c "$ldir" -n main
+        tmux send-keys    -t "$name" 'nvim .' C-m
+        if [ -n "$rdir" ]; then
+            tmux split-window -h -l 50% -t "$name" -c "$rdir"   # right col: client editor
+            tmux send-keys    -t "$name" 'nvim .' C-m
+            tmux split-window -v -l 50% -t "$name" -c "$rdir"   # bottom-right: client shell
+            tmux select-pane  -t "$name" -L                     # back to left column
+            tmux split-window -v -l 50% -t "$name" -c "$ldir"   # bottom-left: server shell
+            tmux select-pane  -t "$name" -U                     # focus server editor
+        else
+            tmux split-window -v -l 50% -t "$name" -c "$ldir"
+            tmux select-pane  -t "$name" -U
+        fi
+    fi
+
+    if ! tmux has-session -t "=$name" 2>/dev/null; then
+        tmux new-session -d -s "$name" -c "$dir" -n main
+        tmux send-keys   -t "$name" 'nvim .' C-m
+        tmux split-window -v -l 50% -t "$name" -c "$dir"
+        tmux select-pane -U -t "$name"
+    fi
+
+    # switch if already in tmux, otherwise attach
+    [ -n "$TMUX" ] && tmux switch-client -t "$name" || tmux attach -t "$name"
+}
+
 # Secret environment variables
 [ -f ~/.secret_env ] && source ~/.secret_env
 
@@ -45,4 +81,11 @@ fi
 
 # Git completion (zsh has built-in git completion, but if you have custom one)
 [ -f ~/.git-completion.zsh ] && source ~/.git-completion.zsh
+
+# postgres 
 export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@18/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@18/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@18/lib/postgresql/pkgconfig:$PKG_CONFIG_PATH"
+
+
